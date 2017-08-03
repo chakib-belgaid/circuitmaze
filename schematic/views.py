@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render,redirect
 
 
@@ -15,3 +16,20 @@ def test(request , a,b):
 
 def haha(request):
     return HttpResponse("u were redirected")
+
+
+def today(request):
+    couleurs = {'FF0000': 'rouge',
+
+                'ED7F10': 'orange',
+
+                'FFFF00': 'jaune',
+
+                '00FF00': 'vert',
+
+                '0000FF': 'bleu',
+
+                '4B0082': 'indigo',
+
+                '660099': 'violet'}
+    return render(request, 'schematic/test.html', {'date': datetime.now, 'couleurs':couleurs})

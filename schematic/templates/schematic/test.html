@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<h1> current date</h1>
+<p>la date actuelle est <b>{{ date }}</b>   </p>
+<p>Les couleurs de l'arc-en-ciel sont :
+
+
+<ul>
+
+{% for code, nom in couleurs.items %}
+
+    <li style="color:#{{ code }}">{{ nom }}</li>
+
+{% endfor %}
+
+</ul></p>
+</body>
+</html>
