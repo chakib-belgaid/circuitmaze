@@ -33,3 +33,7 @@ def today(request):
 
                 '660099': 'violet'}
     return render(request, 'schematic/test.html', {'date': datetime.now, 'couleurs':couleurs})
+
+
+def blog(request):
+    return render(request,'schematic/blog.html')
